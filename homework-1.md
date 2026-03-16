@@ -74,11 +74,16 @@ For each device:
         3. Announce the IP spaces on RIP
             ```
             (config-router)# do show ip route       ## Show IP spaces to add
-            (config-router)# net 10.0.X.1
-            (config-router)# net 1.1.X.1
-            (config-router)# do ping 1.1.(X-1).1     ## Verify connectivity
+            (config-router)# net 10.0.C1.0          ## IP of gig0/0
+            (config-router)# net 10.0.C2.0          ## IP of gig0/1
+            (config-router)# net 1.1.X.0            ## IP of lo0
+            (config-router)# do ping 1.1.(X-1).1    ## Verify connectivity
             ```
-    6. Copy running configuration to memory
+    6. Test ping to lo0 of Router-1
+        ```
+        # ping 1.1.1.1
+        ```
+    7. Copy running configuration to memory
         ```
         # write memory      
         # copy running-config startup-config        ## write memory does this under the hood
