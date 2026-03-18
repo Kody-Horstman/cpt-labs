@@ -1,5 +1,6 @@
 # Cisco Packet Tracer : Homework 1
 Date : 16 Mar 2026
+Packet Tracer Version : 9.0.0+
 
 ## Objective
 Create a chain of 2911 Routers using the RIP protocol until you exceed RIPs maximum hop count.
